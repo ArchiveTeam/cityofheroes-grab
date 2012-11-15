@@ -64,11 +64,11 @@ wget.callbacks.get_urls = function(file, url, is_css, iri)
       table.insert(urls, { url=(base.."/member.php?u="..u), link_expect_html=1 })
     end
 
-    -- posts
-    for p, c in string.gmatch(html, "showpost%.php%?p=(%d+)&amp;postcount=(%d+)\"[^>]+id=\"postcount") do
-      table.insert(urls, { url=(base.."/showpost.php?p="..p.."&postcount="..c), link_expect_html=1 })
-      table.insert(urls, { url=(base.."/showthread.php?p="..p), link_expect_html=1 })
-    end
+--  -- posts
+--  for p, c in string.gmatch(html, "showpost%.php%?p=(%d+)&amp;postcount=(%d+)\"[^>]+id=\"postcount") do
+--    table.insert(urls, { url=(base.."/showpost.php?p="..p.."&postcount="..c), link_expect_html=1 })
+--    table.insert(urls, { url=(base.."/showthread.php?p="..p), link_expect_html=1 })
+--  end
 
     return urls
   end
