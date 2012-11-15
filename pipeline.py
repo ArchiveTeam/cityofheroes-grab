@@ -122,6 +122,7 @@ pipeline = Pipeline(
         ItemInterpolation("%(warc_file_base)s.warc.gz")
       ],
       extra_args = [
+        "--partial",
         "--partial-dir", ".rsync-tmp"
       ]
     ),
